@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+body{
+    background-color: #081b29;
+}
+.header{
+    margin-top: 5vh;
+    padding: 0 8vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 1.5rem;
+}
+.navbar{
+    font-size: 1.3rem;
+    display: flex;
+    gap: 3vw;
+}
+.home{
+    margin-top: 13vh;
+    padding: 0 8vw;
+    display: flex;
+    justify-content: space-between;
+}
+img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+}
+
+.home h1{
+    font-weight: normal;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 2vh;
+}
+.home .auto-typing{
+    margin-top: 5vh;
+    letter-spacing: 0;
+}
+span{
+    color:#04abee;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    letter-spacing: .5px;
+    padding: 0 10px;
+}
+a:after{
+    content: "";
+    background-color: #04abee;
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+a:hover:after{
+    width:100%;
+}
+
+.menu-icon {
+    display: none;
+}
+.intro{
+    margin-top: 15vh;
+}
+.wave {
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+}
+@keyframes waving-hand{
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(14deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 744px) {
+    .header{
+        margin-top: 4vh;
+        padding: 0;
+    }
+    .navbar {
+        margin: 0;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .navbar a {
+        padding: 15px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        background-color: white;
+        color: #04abee;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-right: 5vw;
+    }
+    
+    a:hover:after{
+        width:0;
+    }
+    .home {
+        margin-top: 20vh;
+        padding: 0 5vw;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center; 
+    }
+    .intro{
+        margin-top: 2vh;
+        width: 70%;
+    }
+    .home div {
+        margin-bottom: 20px; 
+    }
+    .logo{
+        margin-left: 5vw;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+    }
+}
+.show {
+    display: flex;
+}
+
+.menu-icon{
+    font-size: 30px; 
+}
+
